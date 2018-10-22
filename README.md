@@ -48,6 +48,7 @@ class DaemonApplication : Application() {
         AGEH.initialize(this, AGEH.ConfigBuilder()
                 .setRestartApp(true) //是否在主进程崩溃时重启app，如果为false则会在崩溃时什么也不做，默认true
                 .setRecordToFileSystem(true) //是否将异常信息记录到文件系统。默认false。记录地址在/sdcard/AGEH/packagename_yyyy-MM-dd.log
+                .setCustomParams(HashMap()) //添加上传异常信息的自定义参数
                 .setUploadUrl("http://xxx.xxx.xxx/uploadException")) //设置上传异常信息的url，默认不上传
     }
     
